@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonadHub - Public Community Recognizer</title>
+    <link type="image/x-icon" href="monadhub.png" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">monad<span>Hub</span></div>
+            <button class="wallet-connect" id="connectWallet">Connect Wallet</button>
+        </header>
+
+        <section class="hero">
+            <h1>Public Recognition Platform</h1>
+            <p>Vote once per day for notable contributors in the Monad ecosystem</p>
+        </section>
+
+        <section class="voting-form">
+            <div class="form-group">
+                <label for="twitterHandles">Twitter Usernames (up to 3, separated by commas)</label>
+                <textarea id="twitterHandles" class="form-input form-textarea" placeholder="@username1, @username2, @username3"></textarea>
+                <div class="form-hint">Enter up to 3 Twitter usernames, separated by commas. You can vote once every 24 hours.</div>
+            </div>
+            <button class="submit-btn" id="submitVote" disabled>Submit Vote</button>
+            <div class="voting-info" id="votingInfo">
+                Connected wallet: Not connected
+            </div>
+        </section>
+
+        <section class="contributors">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Top Contributors</h2>
+                    <div class="section-subtitle">According to the Monad community members</div>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="form-input search-input" placeholder="Search username...">
+                    <button class="search-clear" id="clearSearch">×</button>
+                </div>
+            </div>
+            <ul class="contributors-list" id="contributorsList">
+                <!-- Contributor items will be populated by JavaScript -->
+            </ul>
+        </section>
+
+        <footer>
+            <p>MonadHub © 2025 | Recognition made with ❤️ by <a href="https://x.com/nftshinessy" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #5A4CAD;">nftshinessy</a> for <a href="https://x.com/monad" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #5A4CAD;">Monad</a> community</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <div class="notification-icon" id="notificationIcon"></div>
+            <div class="notification-message" id="notificationMessage"></div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
